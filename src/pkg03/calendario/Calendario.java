@@ -15,10 +15,9 @@ public class Calendario {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("CALENDÁRIO\n\n");
         Cal calendario = new Cal();
-        calendario.estado();
-        calendario.interfaceGrafica();
+        calendario.exibirMes();
+        calendario.opcoes();
     }
     
 }

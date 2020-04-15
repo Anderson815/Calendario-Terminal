@@ -1,6 +1,7 @@
 package pkg03.calendario;
 
 import java.util.Date;
+import java.util.Scanner;
 
 public class Cal {
     //Atributos
@@ -10,13 +11,13 @@ public class Cal {
     private int mes;
     private int ano;
     
-    //Método principal
-    public void interfaceGrafica(){
+    //Método InterfaceGrafica
+    public void exibirMes(){
         this.interfaceCabecalhoMesAno(this.getMes(), this.getAno());
         this.interfaceCabecalhoSemana();
         this.interfaceCalendario();
     }
-    
+        
     // Métodos Auxiliares Nível 1
     private void interfaceCabecalhoMesAno(int m, int a){
         String meses[] = {"JANEIRO", "FEVEREIRO", "MARÇO", "ABRIL", "MAIO", "JUNHO",
@@ -94,6 +95,7 @@ public class Cal {
             System.out.print("\n");
         }    
     }
+    
     //Método Auxiliar nível 2
     private int semanas_do_mes(){
         int semanas_mes = 5;
@@ -109,6 +111,41 @@ public class Cal {
         }
         
         return semanas_mes;
+    }
+    
+    //Método InterfaceGráfica
+    public void opcoes(){
+        Scanner leitor  = new Scanner(System.in);
+        String op;
+        
+        System.out.println("\n\n");
+        System.out.println("|--- LISTA DE AÇÕES ---|");
+        System.out.println("| > - Avançar um mês   |");
+        System.out.println("| < - Voltar um mês    |");
+        System.out.println("| p - Pesquisar um mês |");
+        System.out.println("| s - Sair             |");
+        System.out.println("|______________________|");
+        System.out.print("O que você deseja fazer?: ");
+        op = leitor.next();
+        
+        this.opcao(op);
+    }
+    
+    // Métodos Auxiliares Nível 1
+    private void opcao(String op){
+        switch(op){
+            case ">":
+                this.avancarMes();
+                break;
+            case "<":
+                break;
+            case "p":
+                break;
+            case "s":
+                break;
+            default:
+                System.out.println("!!! OPÇÃO INVÁLIDA !!!");
+        }
     }
     
     //Método principal
@@ -128,32 +165,52 @@ public class Cal {
     }
     
     //Método Auxiliar
-    private void inicializarS(){
-        int anoConstrutor = 2017;
-        int mesConstrutor = 0;
-        int s = 1;
+    private void atualizarS(int anoReferencia, int mesReferencia, int diaSReferencia){        
+        int dsa = diaSReferencia; //dia da semana artual
+        int comecoMes = mesReferencia;
         
-        if((this.getAno() == anoConstrutor && this.getMes() > mesConstrutor) || (this.getAno() > anoConstrutor)){
-            for(int ano = anoConstrutor; ano <= this.getAno(); ano++){
-                int mesFimLoop = 12;
-                if(ano == this.getAno()){
-                    mesFimLoop = this.getMes();
-                }
+        if((this.getAno() == anoReferencia && this.getMes() > mesReferencia) || this.getAno() > anoReferencia){
+            for(int ano = anoReferencia; ano <= this.getAno(); ano++){
                 
+                int mesFimLoop = (ano == this.getAno())?this.getMes():12;
                 int fevereiro = (ano % 4 == 0)? 1: 0;
                 this.getRm()[1] = fevereiro;
                 
-                for(int meses = 0; meses < mesFimLoop; meses++){
-                    s += this.getRm()[meses];
+                for(int meses = comecoMes; meses < mesFimLoop; meses++){
+                    dsa += this.getRm()[meses];
                 }
+                comecoMes = 0;
             }
+            
+            dsa %= 7;
+            if(dsa == 0)dsa = 7;
+            this.setS(dsa);
+            
+        }else if((this.getAno() == anoReferencia && this.getMes() < mesReferencia) || this.getAno() < anoReferencia){
+            int rm = 0;
+            if(comecoMes > 0)comecoMes = comecoMes - 1;
+            else comecoMes = 11;
+            
+            for(int ano = anoReferencia; ano >= this.getAno(); ano--){
+                
+                int mesFimLoop = (ano == this.getAno())? this.getMes(): 0;
+                int fevereiro = (ano % 4 == 0)? 1: 0;
+                this.getRm()[1] = fevereiro;
+                
+                for(int meses = comecoMes; meses >= mesFimLoop; meses--){
+                    rm += this.getRm()[meses];
+                }
+                comecoMes = 11;
+            }
+            
+            dsa = (diaSReferencia + 7 - (rm % 7)) % 7;
+            if(dsa == 0) dsa = 7;
+            this.setS(dsa);
         }
-        s %= 7;
-        if(s == 0)s = 7;
-        this.setS(s);
+        
     }
     
-    //Método de visualização
+    //Método de status
     public void estado(){
         System.out.println("Descrição");
         System.out.println("Ano: " + this.getAno());
@@ -171,8 +228,8 @@ public class Cal {
     public Cal(){
         Date calendario = new Date();
         this.setMes(calendario.getMonth());
-        this.setAno(calendario.getYear() + 1900);
-        this.inicializarS();
+        this.setAno(calendario.getYear() + 1900);        
+        this.atualizarS(2020, 2, 1);
     }
     
     private void setMes(int m){
