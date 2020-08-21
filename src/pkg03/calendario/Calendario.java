@@ -25,6 +25,16 @@ public class Calendario {
             Calendario.exibirMes(cal);
             continuar = Calendario.opcoes(cal);
         }while(continuar);
+        
+        System.out.println("\n\n\nGOSTOU DO PROJETO ???");
+        System.out.println("Se a sua resposta for sim, então (por favor):");
+        System.out.println("\n    1 - De sua recomendação, das habilidade utilizadas nesse projeto, no meu Linkedin;");
+        System.out.println("        * JAVA;");
+        System.out.println("        * Lógica de programação;");
+        System.out.println("        * NetBeans;");
+        System.out.println("\n    2 - Caso você tenha algum comentário, feedback ou sugestão me mande uma mensagem também no meu Linkedin;");
+        System.out.println("\n    Linkedin: linkedin.com/in/anderson-correia");
+        System.out.println("\n    Muito obrigado pela sua colaboração !!!");
     }
     
     public static void exibirMes(Cal cal){
@@ -164,17 +174,23 @@ public class Calendario {
                 System.out.println("--- Pesquisar Mês ---");
                 int ano, mes;
                 
-                System.out.print("ANO: ");
-                ano = leitor.nextInt();
-                System.out.print("MÊS: ");
-                mes = leitor.nextInt();
-                
-                if(mes < 1 || mes > 12){
-                    System.out.println("\n!!! MÊS INVÁLIDO !!!");
-                    System.out.print("Aperte qualquer tecla e enter para continuar ");
+                try{
+                    System.out.print("ANO: ");
+                    ano = leitor.nextInt();
+                    System.out.print("MÊS: ");
+                    mes = leitor.nextInt();
+
+                    if(mes < 1 || mes > 12){
+                        System.out.println("\n!!! MÊS INVÁLIDO !!!");
+                        System.out.print("Aperte qualquer tecla e enter para continuar ");
+                        leitor.next();
+                    }else cal.pesquisarMes(mes - 1, ano);  
+                }catch(java.util.InputMismatchException erro){
+                    System.out.println("!!! ERRO !!!");
+                    leitor.nextLine();
+                    System.out.print("Aperte qualquer tecla alfanumérica e em seguida a tecla enter para continuar: ");
                     leitor.next();
-                }else cal.pesquisarMes(mes - 1, ano);  
-                
+                }
                 break;
             case "s":
                 continuar = false;
