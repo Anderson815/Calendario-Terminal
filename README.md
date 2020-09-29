@@ -1,6 +1,6 @@
 <h1>Calendário Terminal</h1>
 <p>
-Com base nos sistemas de calendário do Google e da Microsoft, resolvi tentar fazer algo semelhante, porém com as funcionalidades básicas no terminal para praticar bem os conceitos de lógica de programação através da linguagem Java. 
+Com base nos sistemas de calendário do Google e da Microsoft, resolvi tentar fazer algo semelhante, porém com as funcionalidades básicas no terminal para praticar bem os conceitos de lógica de programação através da linguagem Java
 </p>
 
 <h2>:dart: Objetivo</h2>
