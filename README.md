@@ -4,6 +4,7 @@ Com base nos sistemas de calendário do Google e da Microsoft, resolvi tentar fa
 </p>
 
 <h2>:dart: Objetivo</h2>
+<p>Reproduzir um calendário gráfico no ambiente do terminal</p>
 <img src="Midia/Tela_principal.png">
 <p>Funcionalidades do sistema:</p>
 <ul>
