@@ -1,5 +1,4 @@
 <h1>Calendário Terminal</h1>
-<h2>Introdução</h2>
 <p>
 Com base nos sistemas de calendário do Google e da Microsoft, resolvi tentar fazer algo semelhante, porém com as funcionalidades básicas no terminal para praticar bem os conceitos de lógica de programação através da linguagem Java. 
 </p>
@@ -14,8 +13,23 @@ Com base nos sistemas de calendário do Google e da Microsoft, resolvi tentar fa
 </ul>
 
 <h2> :package: Requisitos</h2>
-<p>Apenas do JAVA versão 8 ou superior instalando no seu computador, você pode baixar ele <a href="https://www.java.com/pt-BR/">clicando aqui</a></p> 
-<h2>Como usar</h2>
+<p>Apenas do JAVA versão 8 ou superior instalando no seu computador, você pode baixar ele <a href="https://www.java.com/pt-BR/">clicando aqui</a></p>
+
+<h2>Para abrir o programa</h2>
+<p>Se for pelo Window, abra o DOS(Prompt de Comandos)</p>
+<ol>
+  <li>Vá até a pasta do projeto através do comando DIR "ENDEREÇO", por exemplo se tiver na Área de Trabalho: dir "C:\Users\ander\OneDrive\Área de Trabalho\Calendario-Terminal"</li>
+  <li>Entre na pasta dist do projeto com o seguinte comando: dir dist</li>
+  <li>faça o seguinte comando: java -jar Calendario_Terminal.jar
+</ol>
+
+<p>Se for Linux, abra o terminal</p>
+<ol>
+  <li>Vá até a pasta do projeto através do comando CD "ENDEREÇO", por exemplo se tiver na Área de Trabalho: cd "C:/Users/ander/OneDrive/Área de Trabalho/Calendario-Terminal"</li>
+  <li>Entre na pasta dist do projeto com o seguinte comando: cd dist</li>
+  <li>faça o seguinte comando: java -jar Calendario_Terminal.jar
+</ol>
+
 <h2>:pray: Ajuda</h2>
 
   <p>
