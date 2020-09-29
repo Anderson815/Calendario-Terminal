@@ -19,8 +19,7 @@
 <h2>:pray: Ajuda</h2>
 
   <p>
-  GOSTOU DO PROJETO ???
-  Se a sua resposta for sim, então (por favor):
+  Se você gostou do projeto, por favor:
   </p>
   
   <ol>
