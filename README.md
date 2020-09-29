@@ -20,7 +20,7 @@ Com base nos sistemas de calendário do Google e da Microsoft, resolvi tentar fa
 </ul>
 
 <h2>:package: Requisitos</h2>
-<p>Apenas do JAVA versão 8 ou superior instalando no seu computador, você pode baixar ele <a href="https://www.java.com/pt-BR/">clicando aqui</a></p>
+<p>Apenas do JAVA versão 8 ou superior instalando no seu computador, você pode baixar <a href="https://www.java.com/pt-BR/">clicando aqui</a></p>
 
 <h2>:checkered_flag: Para abrir o programa</h2>
 <p>Se for pelo Window, abra o DOS(Prompt de Comandos) e execute os seguintes passos:</p>
