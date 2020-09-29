@@ -19,7 +19,7 @@
 <h2>:pray: Ajuda</h2>
 
   <p>
-  Se você gostou do projeto, por favor:
+  Se você gostou do projeto, por favor não esqueça de:
   </p>
   
   <ol>
