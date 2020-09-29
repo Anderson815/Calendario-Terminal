@@ -1,7 +1,7 @@
 <h1>Calendário Terminal</h1>
 <h2>Introdução</h2>
 <p>
-  Este foi um dos primeiros projetos que eu fiz quando eu estava cursando técnico em informática na ETEC, porém naquele tempo eu usei a linguagem C#, mas depois de um tempo resolvi fazer em Java. Confesso que eu apanhei um pouco para recria-lo, pois no C#
+Com base nos sistemas de calendário do Google e da Microsoft, resolvi tentar fazer algo semelhante, porém com as funcionalidades básicas no terminal para praticar bem os conceitos de lógica de programação através da linguagem Java. 
 </p>
 <h2>:dart: Objetivo</h2>
 <img src="Midia/Tela_principal.png">
