@@ -45,7 +45,7 @@ Com base nos sistemas de calendário do Google e da Microsoft, resolvi tentar fa
   </p>
   
   <ol>
-  <li>De sua recomendação, das habilidade utilizadas nesse projeto, no meu Linkedin</li>
+  <li>Dar sua recomendação, das habilidade utilizadas nesse projeto, no meu Linkedin</li>
     <ul>
       <li>  JAVA</li>
       <li>  Lógica de programação</li>
