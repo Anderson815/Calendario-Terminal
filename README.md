@@ -28,14 +28,14 @@ Com base nos sistemas de calendário do Google e da Microsoft, resolvi tentar fa
 <ol>
   <li>Vá até a pasta do projeto através do comando DIR "ENDEREÇO", por exemplo se tiver na Área de Trabalho: dir "C:\Users\ander\OneDrive\Área de Trabalho\Calendario-Terminal"</li>
   <li>Entre na pasta dist do projeto com o seguinte comando: dir dist</li>
-  <li>faça o seguinte comando: java -jar Calendario_Terminal.jar
+  <li>faça o seguinte comando: java -jar 03_-_Calendario.jar</li>
 </ol>
 
 <p>Se for Linux, abra o terminal e execute os seguintes passos:</p>
 <ol>
   <li>Vá até a pasta do projeto através do comando CD "ENDEREÇO", por exemplo se tiver na Área de Trabalho: cd "C:/Users/ander/OneDrive/Área de Trabalho/Calendario-Terminal"</li>
   <li>Entre na pasta dist do projeto com o seguinte comando: cd dist</li>
-  <li>faça o seguinte comando: java -jar Calendario_Terminal.jar
+  <li>faça o seguinte comando: java -jar 03_-_Calendario.jar</li>
 </ol>
 
 <h2>:pray: Ajuda</h2>
