@@ -79,35 +79,13 @@ public class Cal {
                 }else if(contadorColuna % 5 == 0){
                     System.out.print("|");
                 }else{
-                    /*
-                    informar_dias = ((contadorLinha == 2 && contadorColuna >= (this.getS() * 5) - 3) || contadorLinha > 2);
-                    if(informar_dias && contadorLinha % 3 == 2 && contadorColuna % 5 == 2){
-                        if(dia <= (this.getRm()[this.getMes()] + 28)){
-                            String d = (dia < 10)? "0" + Integer.toString(dia): Integer.toString(dia);
-                            System.out.print(d);
-                            contadorColuna++;
-                            dia++;
-                        }else{
-                            contadorColuna++;
-                            System.out.print("  ");
-                        }
-                    }else{
-                        System.out.print(" ");
-                    }
-                    */
-                    
                     intervalo = ((contadorLinha == 2 && contadorColuna >= (this.getS() * 5) - 3)
-                                    || contadorLinha > 2);
+                                    || (contadorLinha > 2 && dia <= 28 + this.getRm()[this.getMes()]));
                     if(intervalo && contadorLinha % 3 == 2 && contadorColuna % 5 == 2){
-                        if(dia <= (this.getRm()[this.getMes()] + 28)){
-                            String d = (dia < 10)? "0" + Integer.toString(dia): Integer.toString(dia);
-                            System.out.print(d);
-                            contadorColuna++;
-                            dia++;
-                        }else{
-                            contadorColuna++;
-                            System.out.print("  ");
-                        }
+                        String d = (dia < 10)? "0" + Integer.toString(dia): Integer.toString(dia);
+                        System.out.print(d);
+                        contadorColuna++;
+                        dia++;
                     }else{
                         System.out.print(" ");
                     }
@@ -122,9 +100,9 @@ public class Cal {
         
         if(this.getS() == 1 && this.getRm()[this.getMes()] == 0){
             semanas_mes = 4;
-        }else if((this.getS() == 6 || this.getS() == 0) && this.getRm()[this.getMes()] == 3){
+        }else if((this.getS() == 6 || this.getS() == 7) && this.getRm()[this.getMes()] == 3){
             semanas_mes = 6;
-        }else if(this.getS() == 0 && this.getRm()[this.getMes()] == 2){
+        }else if(this.getS() == 7 && this.getRm()[this.getMes()] == 2){
             semanas_mes = 6;
         }else{
             semanas_mes = 5;
@@ -171,6 +149,7 @@ public class Cal {
             }
         }
         s %= 7;
+        if(s == 0)s = 7;
         this.setS(s);
     }
     
